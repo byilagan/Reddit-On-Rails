@@ -1,0 +1,6 @@
+<%= simple_form_for @post do |f|%> 
+    <%= f.input :title, label: "Title" %> 
+    <%= f.input :body, as: :text, label: "What's on your mind..." %> 
+    <%= f.button :submit %>
+<% end %>
+

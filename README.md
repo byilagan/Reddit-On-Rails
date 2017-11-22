@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# Reddit-On-Rails
+A simplified, functional clone of Reddit implemented with Rails
+>>>>>>> 8ca4fd1c9ec2470863fed90be4846751d9414b20
