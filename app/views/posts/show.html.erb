@@ -3,12 +3,18 @@
 <%= link_to "Back", root_path %>
 
 <% if user_signed_in? %>
-    <% if @post.owner_id == current_user.id.to_s %>
+    <% if @post.user_id.to_s == current_user.id.to_s %>
         <%= link_to "Edit ", edit_post_path(@post) %>
         <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
     <% end %>
 <% end %>
 
-<h2><%= @post.body %></h2>
+<p><%= @post.body %></p>
 
+<h2> Comments </h2> 
 
+<%= render @post.comments %>
+
+<% if user_signed_in? %>
+    <%= render 'comments/form' %>
+<% end %>

@@ -6,17 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to "Reddit Clone", root_path, class: "navbar-brand" %>
+          <%= link_to "ReadIT", root_path, class: "navbar-brand" %>
         </div>
 
         <ul class="nav navbar-nav navbar-right"> 
           <% if user_signed_in? %> 
+            <p class="navbar-text"> Signed in as <%= current_user.email %> </p>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
             <button type="button" class="btn btn-default navbar-btn"><%= link_to "New Post", new_post_path %></button>
           <% else %> 
@@ -30,6 +34,8 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -16,3 +16,67 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+.navbar {
+    background-color: #262626; 
+    border-color: #262626;
+    box-shadow: 2px 2px 5px #888888;
+    font-family: 'Arvo', serif;
+}
+
+.navbar-brand {
+    font-weight: bold; 
+    color: gainsboro !important;
+    font-size: 40px;
+}
+
+.nav .navbar-text {
+    color: gray !important;
+    font-size: 12px;
+}
+
+.nav li a{
+    color: gainsboro !important;
+    font-size: 16px;
+}
+
+.nav li a:hover {
+    text-decoration: underline
+}
+
+.navbar button a{
+    font-family: 'Arvo', serif;
+    font-weight: bold; 
+    font-size: 16px;
+    color: #262626;
+}
+
+.navbar button a:hover {
+    background-color: transparent;
+}
+
+// ALL POSTS VIEW 
+#allPosts{
+    font-family: 'Arvo', serif;
+}
+
+#allPosts h1{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#allPosts h1 a {
+    color: #262626;
+}
+
+#allPosts h4 {
+    color: grey;
+    font-size: 14px;
+}
+
+.pageHeader {
+    color: #262626; 
+    font-family: 'Arvo', serif;
+    font-weight: bold; 
+    margin-bottom: 25px;
+}

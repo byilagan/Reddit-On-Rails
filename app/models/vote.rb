@@ -1,8 +1,10 @@
 class Vote
   include Mongoid::Document
-  include Mongoid::Timestamps
+  include Mongoid::Timestamps 
 
-  field :owner_id, type:String
-  field :post_id, type: String
-  field :voteType, type: Bool # True => upvote; False => downvote
+  belongs_to :user
+  belongs_to :post, optional: true
+  belongs_to :comment, optional: true
+
+  field :voteType, type: Boolean
 end
