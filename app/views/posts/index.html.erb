@@ -6,11 +6,15 @@
         <div class="row">
             <div class="col-sm-2">
                 
-                <%= button_to 'upVote', post_upvote_path(post), method: :post %>
+                <%if user_signed_in? %>
+                    <%= button_to 'upVote',  post_upvote_path(@post, comment), method: :post %>
+                <%end%>
 
                 <h4> <%= post.points %> points</h4>
                 
-                <%= button_to 'downVote', post_downvote_path(post), method: :post %>
+                <%if user_signed_in? %>
+                    <%= button_to 'downVote',  post_upvote_path(@post, comment), method: :post %>
+                <%end%>
             </div>
             <div class="col-sm-10">
                 <h1><%= link_to post.title, post_path(post)%></h1>

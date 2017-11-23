@@ -1,4 +1,4 @@
-<h1><%= @post.title %></h1>
+<h1 class="pageHeader"><%= @post.title %></h1>
 
 <%= link_to "Back", root_path %>
 
@@ -9,11 +9,14 @@
     <% end %>
 <% end %>
 
+<div class="postBody">
 <p><%= @post.body %></p>
 
-<h2> Comments </h2> 
+<h2 style="margin-bottom: 30px"> Comments </h2> 
 
-<%= render @post.comments %>
+<div class="container" style="margin-bottom: 30px">
+    <%= render @post.comments %>
+</div>
 
 <% if user_signed_in? %>
     <%= render 'comments/form' %>
