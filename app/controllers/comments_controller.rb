@@ -18,6 +18,10 @@ class CommentsController < ApplicationController
         @vote.user_id = current_user.id
         @vote.voteType = true
         @vote.save
+
+        @comment.points = @comment.votes.where(voteType: "true").count -  @comment.votes.where(voteType: "false").count
+        @comment.save
+
         redirect_to post_path(@post)
     end
 
@@ -27,6 +31,10 @@ class CommentsController < ApplicationController
         @vote.user_id = current_user.id
         @vote.voteType = false
         @vote.save
+
+        @comment.points = @comment.votes.where(voteType: "true").count -  @comment.votes.where(voteType: "false").count
+        @comment.save
+
         redirect_to post_path(@post)
     end
     

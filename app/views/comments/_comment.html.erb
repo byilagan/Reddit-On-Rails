@@ -2,13 +2,13 @@
     <div class="row">
             <div class="col-sm-2">
                 <%if user_signed_in? %>
-                    <%= button_to 'upVote',  post_comment_upvote_path(@post, comment), method: :post %>
+                    <%= link_to image_tag("uparrow.png", width: '20px'), post_comment_upvote_path(@post, comment), method: :post%>
                 <%end%>
 
-                <h4> <%= comment.votes.where(voteType: "true").count -  comment.votes.where(voteType: "false").count%> points</h4>
+                <h4 style="margin: 0"> <%= comment.points %> points</h4>
                 
                 <%if user_signed_in? %>
-                    <%= button_to 'downVote',  post_comment_downvote_path(@post, comment), method: :post %>
+                    <%= link_to image_tag("downarrow.png", width: '20px'), post_comment_downvote_path(@post, comment), method: :post%>
                 <%end%>
             </div>
             <div class="col-sm-10">

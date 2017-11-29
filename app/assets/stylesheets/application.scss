@@ -17,11 +17,14 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ body {
+     font-family: 'Arvo', serif;
+ }
+
 .navbar {
     background-color: #262626; 
     border-color: #262626;
     box-shadow: 2px 2px 5px #888888;
-    font-family: 'Arvo', serif;
 }
 
 .navbar-brand {
@@ -45,7 +48,6 @@
 }
 
 .navbar button a{
-    font-family: 'Arvo', serif;
     font-weight: bold; 
     font-size: 16px;
     color: #262626;

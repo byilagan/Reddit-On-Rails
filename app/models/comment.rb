@@ -8,7 +8,7 @@ class Comment
 
   field :post_id, type: String
   field :body, type: String
-  field :points, type: Integer
+  field :points, type: Integer, default: 0
 
   validates_presence_of :body
 end
