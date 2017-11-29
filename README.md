@@ -46,4 +46,18 @@ rails s
 ```
 <br>Start up application in browser at **localhost:3000**
 
+### Running the Tests 
+Run rspec tests 
+```
+rspec -fd
+```
+Unit tests that test creation and valiation of mongo models 
+
+### Built With
+* [Rails](http://rubyonrails.org/) - Web framework used
+* [Mongoid](https://rubygems.org/gems/mongoid) - Ruby framework used for MongoDB back-end models and queries 
+* [Bootstrap-sass](https://rubygems.org/gems/bootstrap-sass) - Used to create UI 
+* [Devise](https://rubygems.org/gems/devise) - Used to manage users and user authentication
+* [Simple-form](https://rubygems.org/gems/simple_form) - Used for user input fields 
+
 
