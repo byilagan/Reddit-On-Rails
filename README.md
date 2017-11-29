@@ -46,12 +46,16 @@ rails s
 ```
 <br>Start up application in browser at **localhost:3000**
 
-### Running the Tests 
+## Running the Tests 
+
+### Rspec Tests
+Unit tests that test creation and valiation of mongo models <br>
+
 Run rspec tests 
 ```
 rspec -fd
 ```
-Unit tests that test creation and valiation of mongo models 
+
 
 ### Built With
 * [Rails](http://rubyonrails.org/) - Web framework used
