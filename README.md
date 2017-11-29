@@ -50,6 +50,8 @@ rails s
 
 ### Rspec Tests
 Unit tests that test creation and valiation of mongo models <br>
+
+Run rspec tests 
 ```
 rspec -fd
 ```
