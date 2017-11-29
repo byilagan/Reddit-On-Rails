@@ -57,7 +57,7 @@ rspec -fd
 ```
 
 
-### Built With
+## Built With
 * [Rails](http://rubyonrails.org/) - Web framework used
 * [Mongoid](https://rubygems.org/gems/mongoid) - Ruby framework used for MongoDB back-end models and queries 
 * [Bootstrap-sass](https://rubygems.org/gems/bootstrap-sass) - Used to create UI 
