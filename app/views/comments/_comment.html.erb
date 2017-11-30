@@ -5,7 +5,7 @@
                     <%= link_to image_tag("uparrow.png", width: '20px'), post_comment_upvote_path(@post, comment), method: :post%>
                 <%end%>
 
-                <h4 style="margin: 0"> <%= comment.points %> points</h4>
+                <h4 style="margin: 0; font-size: 14px; color: grey;"> <%= comment.points %> points</h4>
                 
                 <%if user_signed_in? %>
                     <%= link_to image_tag("downarrow.png", width: '20px'), post_comment_downvote_path(@post, comment), method: :post%>
@@ -13,7 +13,7 @@
             </div>
             <div class="col-sm-10">
                 <p><%= comment.body %> </p>
-                <h4> submitted by <%= User.find(id: comment.user_id).email%> </h4>
+                <h4 style="color: grey; font-size: 12px;"> submitted by <%= User.find(id: comment.user_id).email%> </h4>
             </div>
     </div>
 <% end %>

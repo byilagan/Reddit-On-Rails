@@ -10,7 +10,7 @@
                     <%= link_to image_tag("uparrow.png", width: '20px'), post_upvote_path(post), method: :post%>
                 <%end%>
 
-                <h4 style="margin: 0"> <%= post.points %> points</h4>
+                <h4 style="margin: 5px"> <%= post.points %> points</h4>
                 
                 <%if user_signed_in? %>
                     <%= link_to image_tag("downarrow.png", width: '20px'), post_downvote_path(post), method: :post%>
